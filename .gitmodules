@@ -1,0 +1,3 @@
+[submodule "app"]
+	path = app
+	url = git@github.com:sukhoy94/dusha-moja-ukraina.git
