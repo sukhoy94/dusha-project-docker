@@ -4,5 +4,13 @@ services:
     build: .
     ports:
       - 8080:80
+    container_name: app-dusha
     volumes:
       - ./app:/src/app
+
+  npm:
+    image: node:current-alpine
+    volumes:
+      - ./app:/src/app
+    entrypoint: ["npm"]
+    working_dir: /src/app
