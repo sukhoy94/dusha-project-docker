@@ -1,9 +1,9 @@
-version: '3'
+version: '3'while
 services:
   app:
     build: .
     ports:
-      - 8080:80
+      - 80:80
     container_name: app-dusha
     volumes:
       - ./app:/src/app
