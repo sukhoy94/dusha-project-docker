@@ -1,4 +1,4 @@
-version: '3'while
+version: '3'
 services:
   app:
     build: .
@@ -13,4 +13,12 @@ services:
     volumes:
       - ./app:/src/app
     entrypoint: ["npm"]
+    working_dir: /src/app
+
+  composer:
+    build:
+      context: .
+      dockerfile: .docker/composer/Dockerfile
+    volumes:
+      - ./app:/src/app
     working_dir: /src/app
