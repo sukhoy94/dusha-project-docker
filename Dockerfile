@@ -10,7 +10,11 @@ RUN chmod +x /usr/local/bin/composer-installer \
     && composer --version \
     && a2enmod rewrite negotiation \
     && apt-get update \
-    && apt-get install zip unzip
+    && apt-get install zip unzip \
+    && apt-get install nano -y
+
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install pdo_mysql
 
 COPY /app /src/app
 COPY .docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
