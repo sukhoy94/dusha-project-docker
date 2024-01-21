@@ -8,12 +8,12 @@ services:
     volumes:
       - ./app:/src/app
     environment:
-      - DB_CONNECTION=mysql
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_DATABASE=${MYSQL_DATABASE}
-      - DB_USERNAME=${MYSQL_USER}
-      - DB_PASSWORD=${MYSQL_PASSWORD}
+      - APP_DB_CONNECTION=mysql
+      - APP_DB_HOST=db
+      - APP_DB_PORT=3306
+      - APP_DB_DATABASE=${MYSQL_DATABASE}
+      - APP_DB_USERNAME=${MYSQL_USER}
+      - APP_DB_PASSWORD=${MYSQL_PASSWORD}
 
   npm:
     image: node:current-alpine
